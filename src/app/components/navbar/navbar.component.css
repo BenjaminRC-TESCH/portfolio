@@ -1,3 +1,4 @@
+/* Estilos por defecto */
 .navbar {
     color: #2C5364;
     font-family: "Poppins", sans-serif;
@@ -9,11 +10,12 @@
     top: 0;
     z-index: 1000;
     margin: 0 auto;
-    /*background: #ffffff;*/
     border-radius: 20px;
     box-sizing: border-box;
     width: fit-content;
     margin-top: 10px;
+    transition: background-color 0.5s, color 0.3s;
+    /* Transición para suavizar el cambio */
 }
 
 .navbar-icon {
@@ -21,22 +23,20 @@
 }
 
 .nav-link {
-    color: #000000;
+    color: #ffffff;
     position: relative;
     margin: 0px 5px;
     padding: 10px 10px 10px 10px;
     font-size: 14px;
     text-align: center;
-}
-
-svg {
-    fill: #ffffff;
-    width: 24px;
+    transition: color 0.3s;
+    /* Transición para suavizar el cambio */
 }
 
 .nav-link:hover,
 .nav-link.active {
-    color: #2C5364;
+    color: #ffffff;
+    /* Color blanco por defecto */
 }
 
 .nav-link::before {
@@ -47,9 +47,11 @@ svg {
     transform: translateX(-50%);
     width: 0;
     height: 2px;
-    background-color: #2C5364;
+    background-color: #ffffff;
+    /* Color blanco por defecto */
     visibility: hidden;
-    transition: 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out, background-color 0.3s;
+    /* Transición para suavizar el cambio */
 }
 
 .nav-link:hover::before {
@@ -57,9 +59,29 @@ svg {
     visibility: visible;
 }
 
-.offcanvas {
-    background-color: #164e63;
+/* Estilos cuando se hace scroll */
+.navbar.scrolled {
+    background-color: #ffffff;
+    /* Cambia el fondo del navbar */
 }
+
+.navbar.scrolled .nav-link {
+    color: #000000;
+    /* Color negro para los enlaces cuando se hace scroll */
+}
+
+.navbar.scrolled .nav-link:hover,
+.navbar.scrolled .nav-link.active {
+    color: #000000;
+    /* Color negro para los enlaces activos o al pasar el mouse cuando se hace scroll */
+}
+
+.navbar.scrolled .nav-link::before {
+    background-color: #000000;
+    /* Color negro para el subrayado cuando se hace scroll */
+}
+
+
 
 @media (max-width: 640px) {
     .nav-link {
@@ -69,12 +91,12 @@ svg {
 }
 
 @media (max-width: 550px) {
-
     .navbar {
         width: 100%;
         height: 60px;
         border-radius: 0;
         margin-top: 0;
+        background-color: initial; /* Mantiene el color actual del navbar */
     }
 
     .navbar-toggler {
@@ -92,7 +114,7 @@ svg {
     }
 
     svg {
-        fill: #000000;
+        fill: #ffffff;
         width: 24px;
     }
 
@@ -120,7 +142,6 @@ svg {
         font-size: 18px;
         text-decoration: none;
         margin: 10px 0;
-        /* Espacio vertical entre los elementos en el offcanvas */
     }
 
     .nav-link:hover {
@@ -136,10 +157,7 @@ svg {
     .nav {
         display: flex;
         justify-content: center;
-        /* Centra los elementos en el navbar */
         flex-wrap: nowrap;
-        /* Evita que los elementos se envuelvan */
         overflow: hidden;
-        /* Asegura que los elementos no se desborden */
     }
 }
