@@ -9,6 +9,22 @@
     align-items: center;
     text-align: center;
     position: relative;
+
+}
+
+.container {
+    z-index: 100;
+}
+
+/*Clase para las particulas*/
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transition: opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
 }
 
 .header .container {
@@ -20,6 +36,7 @@
 .header .content {
     display: flex;
     align-items: center;
+    
 }
 
 .header img {
@@ -32,17 +49,33 @@
     margin: 0;
     font-size: 60px;
     color: #ffffff;
+
+}
+
+#name:before{
+    content: attr(data-desktoptext);
+}
+
+.header h2 {
+    margin: 0;
+    font-size: 40px;
+    color: #ffffff;
 }
 
 .header .name-container {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    /* Cambiado a columna */
+    align-items: flex-start;
+    /* Alinea a la izquierda */
 }
 
 .header .social-icons {
     display: flex;
     gap: 15px;
     margin-top: 20px;
+    padding-left: 0;
+    align-items: center;
 }
 
 .header .social-icons li {
@@ -95,6 +128,12 @@ ul {
     visibility: hidden;
 }
 
+/*Clase para ocultar las particulas cuando se haga scroll*/
+.particles-js.scrolledparticles {
+    opacity: 0;
+    visibility: hidden;
+}
+
 /* Definir la animación de rebote */
 @keyframes bounce {
 
@@ -137,9 +176,17 @@ ul {
         text-align: center;
     }
 
+    .header h2 {
+        margin: 0;
+        font-size: 20px;
+        color: #ffffff;
+        flex-grow: 1;
+        text-align: center;
+    }
+
     .header .social-icons {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 10px;
         margin-top: 10px;
     }
@@ -178,9 +225,9 @@ ul {
 
     .header .social-icons {
         display: flex;
-        justify-content: center;
         gap: 10px;
         margin-top: 10px;
+        justify-content: flex-start;
     }
 
     .header .social-icons li {
@@ -221,6 +268,7 @@ ul {
         justify-content: center;
         gap: 10px;
         margin-top: 10px;
+        justify-content: flex-start;
     }
 
     .header .social-icons li {
@@ -234,20 +282,70 @@ ul {
     }
 }
 
+
+
 @media (max-width: 421px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .header img {
-        margin-right: 0px; 
+        max-width: 100px;
+        margin-bottom: 10px;
+        border-radius: 50%;
+    }
+
+    .header h1 {
+        margin: 0;
+        font-size: 30px;
+        color: #ffffff;
+    }
+
+    #name:before{
+        content: attr(data-phonetext);
+    }
+
+    .header .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+        justify-content: flex-start;
+    }
+
+    .header .social-icons li {
+        list-style: none;
+    }
+
+    .header .social-icons li a svg {
+        fill: #ffffff;
+        width: 24px;
+        height: 24px;
     }
 }
 
 
 .projects {
     background: #0F2027;
-    /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
-    /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     width: 100%;
-    height: 100vh;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+.title {
+    color: #ffffff;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.featured-text {
+    color: #ffffff;
+}
+
+.img-fluid {
+    width: 700px;
 }
