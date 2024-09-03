@@ -1,0 +1,66 @@
+/*HABILIDADES*/
+.skills {
+    background: #0F2027;
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+}
+
+.skills .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills .title {
+    color: #ffffff;
+    font-size: 60px;
+    padding-bottom: 20px;
+    padding-top: 80px;
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.skills .container img {
+    width: 100px;
+    height: 100px;
+    margin: 30px;
+}
+
+@media (max-width:1200px) {
+    .skills .container img {
+        width: 130px;
+        height: 130px;
+        margin: 20px;
+    }
+}
+
+@media (max-width:991px) {
+    .skills .container img {
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+    }
+}
+
+@media (max-width:768px) {
+    .skills .container img {
+        width: 60px;
+        height: 60px;
+        margin: 10px;
+    }
+}
+
+@media (max-width:464px) {
+    .skills .container img {
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+    }
+}
+
+@media (max-width:384px) {
+    .skills .container img {
+        margin: 1px;
+    }
+}

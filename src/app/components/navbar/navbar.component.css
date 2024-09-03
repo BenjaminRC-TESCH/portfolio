@@ -1,0 +1,163 @@
+/* Estilos por defecto */
+.navbar {
+    color: #2C5364;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    display: inline-flex;
+    align-items: center;
+    padding: 0px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-sizing: border-box;
+    width: fit-content;
+    margin-top: 10px;
+    transition: background-color 0.5s, color 0.3s;
+    /* Transición para suavizar el cambio */
+}
+
+.navbar-icon {
+    display: none;
+}
+
+.nav-link {
+    color: #ffffff;
+    position: relative;
+    margin: 0px 5px;
+    padding: 10px 10px 10px 10px;
+    font-size: 14px;
+    text-align: center;
+    transition: color 0.3s;
+    /* Transición para suavizar el cambio */
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff;
+    /* Color blanco por defecto */
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #ffffff;
+    /* Color blanco por defecto */
+    visibility: hidden;
+    transition: width 0.3s ease-in-out, background-color 0.3s;
+    /* Transición para suavizar el cambio */
+}
+
+.nav-link:hover::before {
+    width: 100%;
+    visibility: visible;
+}
+
+/* Estilos cuando se hace scroll */
+.navbar.scrolled {
+    background-color: #ffffff;
+    /* Cambia el fondo del navbar */
+}
+
+.navbar.scrolled .nav-link {
+    color: #000000;
+    /* Color negro para los enlaces cuando se hace scroll */
+}
+
+.navbar.scrolled .nav-link:hover,
+.navbar.scrolled .nav-link.active {
+    color: #000000;
+    /* Color negro para los enlaces activos o al pasar el mouse cuando se hace scroll */
+}
+
+.navbar.scrolled .nav-link::before {
+    background-color: #000000;
+    /* Color negro para el subrayado cuando se hace scroll */
+}
+
+
+
+@media (max-width: 640px) {
+    .nav-link {
+        margin: 0 2px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 550px) {
+    .navbar {
+        width: 100%;
+        height: 60px;
+        border-radius: 0;
+        margin-top: 0;
+        background-color: initial; /* Mantiene el color actual del navbar */
+    }
+
+    .navbar-toggler {
+        display: block;
+        margin: 0 10px;
+        border: none;
+    }
+
+    .navbar-icon {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    svg {
+        fill: #ffffff;
+        width: 24px;
+    }
+
+    .offcanvas {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .offcanvas-body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .close svg {
+        fill: #000000;
+    }
+
+    .nav-link {
+        color: #fff;
+        font-size: 18px;
+        text-decoration: none;
+        margin: 10px 0;
+    }
+
+    .nav-link:hover {
+        color: #ddd;
+    }
+}
+
+@media (min-width: 551px) {
+    .navbar-toggler {
+        display: none;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+}

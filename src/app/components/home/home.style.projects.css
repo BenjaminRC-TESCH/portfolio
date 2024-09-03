@@ -1,0 +1,112 @@
+/*PROYECTOS*/
+
+.projects {
+    background: #0F2027;
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+}
+
+.title {
+    color: #ffffff;
+    font-size: 60px;
+    padding-bottom: 20px;
+    padding-top: 80px;
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.title-project {
+    font-size: 30px;
+}
+
+.featured-text {
+    color: #ffffff;
+    font-size: 20px;
+    opacity: 0.7;
+    font-family: "Red Hat Display", sans-serif;
+    justify-content: center;
+}
+
+.projects {
+    align-items: center;
+}
+
+.projects .container a {
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #2C5364;
+    border-radius: 10px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.project-description {
+    padding-left: 50px;
+    justify-content: center;
+}
+
+ul.development-icons li {
+    display: inline;
+    padding-right: 0.5em;
+}
+
+.development-icons li {
+    list-style: none;
+    margin-right: 20px;
+}
+
+.project-description img {
+    width: 25px;
+    height: 25px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #0F2027;
+    border-radius: 50px;
+}
+
+@media (max-width:991px) {
+    #name:before {
+        content: attr(data-phonetext);
+    }
+
+    .project-description {
+        padding-left: 0px;
+    }
+
+
+
+    .project-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .development-icons {
+        display: flex;
+        justify-content: center;
+        /* Centrar horizontalmente los elementos del ul */
+        padding: 0;
+        /* Eliminar el padding por defecto de ul */
+    }
+
+    .development-icons li {
+        list-style: none;
+        margin-right: 20px;
+    }
+
+    .development-icons li:last-child {
+        margin-right: 0;
+        /* Eliminar margen derecho del último elemento */
+    }
+}
+
+@media (max-width:767px) {
+    .img-project {
+        height: 250px;
+    }
+}
