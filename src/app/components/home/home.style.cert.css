@@ -1,23 +1,23 @@
 /*CERTIFICADOS*/
-.school {
+.onmore {
     background: #0F2027;
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
     background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
 }
 
-.school .container {
+.onmore .container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.school .container .container {
+.onmore .container .container {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
 }
 
-.school .title {
+.onmore .title {
     color: #ffffff;
     font-size: 60px;
     padding-bottom: 20px;
