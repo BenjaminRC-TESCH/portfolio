@@ -95,7 +95,7 @@ export class HomeComponent {
   generateImageArrayCertified(): void {
     for (let i = 1; i <= 3; i++) {
       this.imagesCertified.push({
-        src: `../../../assets/images/certificados/certificado (${i}).png`,
+        src: `../../../assets/images/certificados/certificado (${i}).jpg`,
         alt: `Fire ${i}`,
       });
     }
